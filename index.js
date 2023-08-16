@@ -2,6 +2,7 @@
 
 const inquirer = require('inquirer')
 const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
@@ -37,11 +38,11 @@ const questions = [
             'Mozilla Public License 2.0',
             'GNU Affero General Public License v3.0',
             'The Unlicense',
-            'No License']
+            'No License was used for this project']
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contributions',
         message: 'Enter your contribution guidelines:'
     },
     {
@@ -62,10 +63,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        const readmeContent = generateMarkdown(answers);
+        writeToFile('README.md', readmeContent);
+    });
+}
 
 // Function call to initialize app
 init();
