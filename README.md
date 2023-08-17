@@ -1,21 +1,21 @@
-# Kens Readme Generator
+# Readme Generator
 
 ## Description
-The Readme Generator allows users to quickley create a professional README for a new project
+Allows for users to quickley create professional readmes for a new project
 
 ## Table of Contents
-1. Installation
-2. Usage
-3. Licens
-4. Contribution
-5. Test
-6. Questions
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributions](#contributions)
+5. [Tests](#tests)
+6. [Questions](#questions)
 
 ## Installation
 npm init, npm inquier and node index.js
 
 ## Usage
-Creating ReadMes quickley
+N/A
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
